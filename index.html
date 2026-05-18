@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mãos que Ajudam - Home</title>
+    <title>Mãos que Ajudam - Plataforma de Doações</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
 <nav class="navbar">
-    <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
+    <div class="logo">
+        <span>❤️</span> Mãos que Ajudam
+    </div>
     <div class="nav-links">
         <a href="index.html" class="active">Início</a>
         <a href="sobre.html">Sobre Nós</a>
@@ -19,51 +20,230 @@
         <a href="quero-doar.html">Quero Doar</a>
         <a href="preciso-doacao.html">Preciso de Doação</a>
         <a href="contato.html">Contato</a>
-        <a href="area-doador.html" class="btn-doador">Área Doador</a>
-        <a href="admin.html" class="btn-admin">Admin</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
+    </div>
+    <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
     </div>
 </nav>
 
 <main>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Transforme vidas</span><br>
+                com um gesto de amor 💙
+            </h1>
+            <p class="hero-subtitle">Sua doação leva esperança, alimento e dignidade a quem mais precisa. Comece agora e faça a diferença!</p>
+            <div class="hero-buttons">
+                <a href="quero-doar.html" class="btn-cta pulse">
+                    <i class="fas fa-heart"></i> Doe Agora
+                </a>
+                <a href="como-funciona.html" class="btn-outline">
+                    <i class="fas fa-play"></i> Como funciona
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="hero">
-            <h1>Transforme vidas com um gesto de amor 💙</h1>
-            <p>Sua doação leva esperança e alimento a quem mais precisa. Junte-se a nós!</p>
-            <a href="quero-doar.html" class="btn-cta">Doe Agora →</a>
+        <div class="section-header">
+            <span class="section-badge">Nossas Causas</span>
+            <h2>Escolha onde <span class="highlight">fazer a diferença</span></h2>
+            <p>100% dos recursos vão diretamente para as causas que você escolher</p>
         </div>
 
-        <h2 style="text-align:center;">Causas em destaque</h2>
         <div class="card-grid">
-            <div class="card">
-                <i class="fas fa-child fa-2x" style="color:#e67e22;"></i>
+            <div class="card" data-causa="criancas">
+                <div class="card-icon"><i class="fas fa-child"></i></div>
                 <h3>Crianças</h3>
-                <p>Garantir educação e alimentação para crianças em situação de vulnerabilidade.</p>
+                <p>Garantir educação, alimentação e um futuro melhor para crianças em situação de vulnerabilidade.</p>
+                <div class="card-stats">
+                    <div class="donation-count">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span class="count-number">0</span>
+                        <span class="count-label">doações</span>
+                    </div>
+                </div>
+                <a href="quero-doar.html" class="card-btn">Doar para crianças <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="card">
-                <i class="fas fa-paw fa-2x" style="color:#e67e22;"></i>
+
+            <div class="card" data-causa="animais">
+                <div class="card-icon"><i class="fas fa-paw"></i></div>
                 <h3>Animais</h3>
-                <p>Resgate e cuidados para animais abandonados.</p>
+                <p>Resgate, tratamento e adoção responsável para animais abandonados e em situação de risco.</p>
+                <div class="card-stats">
+                    <div class="donation-count">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span class="count-number">0</span>
+                        <span class="count-label">doações</span>
+                    </div>
+                </div>
+                <a href="quero-doar.html" class="card-btn">Ajudar animais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="card">
-                <i class="fas fa-apple-alt fa-2x" style="color:#e67e22;"></i>
+
+            <div class="card" data-causa="alimentos">
+                <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
                 <h3>Alimentos</h3>
-                <p>Distribuição de cestas básicas para famílias em necessidade.</p>
+                <p>Distribuição de cestas básicas e refeições para famílias em situação de insegurança alimentar.</p>
+                <div class="card-stats">
+                    <div class="donation-count">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span class="count-number">0</span>
+                        <span class="count-label">doações</span>
+                    </div>
+                </div>
+                <a href="quero-doar.html" class="card-btn">Doar alimentos <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
+    </div>
 
-        <div class="image-showcase">
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400" alt="crianças">
-            <img src="https://images.unsplash.com/photo-1540413480008-4675a19b02c3?w=400" alt="doação">
-            <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400" alt="voluntários">
+    <div class="recent-donations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Atividades Recentes</span>
+                <h2>Últimas <span class="highlight">doações</span></h2>
+                <p>Veja quem já começou a fazer a diferença</p>
+            </div>
+            <div class="donations-list" id="donations-list">
+                <div class="empty-state">
+                    <i class="fas fa-heart"></i>
+                    <p>Nenhuma doação registrada ainda</p>
+                    <span>Seja o primeiro a doar!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Como Funciona</span>
+                <h2>Doar é <span class="highlight">simples e rápido</span></h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Escolha uma causa</h4>
+                    <p>Crianças, Animais ou Alimentos</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Defina o valor</h4>
+                    <p>Qualquer valor já ajuda</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Confirme e transforme</h4>
+                    <p>Sua doação vai direto para quem precisa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Receba novidades e histórias inspiradoras</h3>
+                <p>Cadastre-se e fique por dentro das campanhas e resultados da nossa comunidade</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Quero receber</button>
+                </form>
+                <small>Prometemos não enviar spam. Você pode cancelar quando quiser.</small>
+            </div>
         </div>
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2026 Mãos que Ajudam - Solidariedade transforma vidas.</p>
-    <p>Centros de distribuição: São Paulo, Rio, BH, Salvador, Recife.</p>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4><i class="fas fa-heart"></i> Mãos que Ajudam</h4>
+            <p>Transformando vidas através da solidariedade desde 2026.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="quero-doar.html">Quero Doar</a>
+            <a href="preciso-doacao.html">Preciso de Ajuda</a>
+        </div>
+        <div class="footer-section">
+            <h4>Centro de Distribuição</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Petrópolis, RJ</p>
+            <p><i class="fas fa-clock"></i> Seg-Sex: 9h às 17h</p>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p><i class="fas fa-envelope"></i> contato@maosqueajudam.org</p>
+            <p><i class="fas fa-phone"></i> (24) 98765-4321</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mãos que Ajudam - Todos os direitos reservados</p>
+    </div>
 </footer>
 
 <script src="scripts.js"></script>
+<script>
+    function atualizarContadoresHome() {
+        let donations = JSON.parse(localStorage.getItem('donations') || '[]');
+        let contagemCriancas = donations.filter(d => d.causa === 'Crianças' || d.causa === 'criancas').length;
+        let contagemAnimais = donations.filter(d => d.causa === 'Animais' || d.causa === 'animais').length;
+        let contagemAlimentos = donations.filter(d => d.causa === 'Alimentos' || d.causa === 'alimentos').length;
+        
+        let cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            let causa = card.getAttribute('data-causa');
+            let countSpan = card.querySelector('.count-number');
+            if (causa === 'criancas' && countSpan) countSpan.textContent = contagemCriancas;
+            if (causa === 'animais' && countSpan) countSpan.textContent = contagemAnimais;
+            if (causa === 'alimentos' && countSpan) countSpan.textContent = contagemAlimentos;
+        });
+        
+        let donationsList = document.getElementById('donations-list');
+        if (donationsList) {
+            if (donations.length === 0) {
+                donationsList.innerHTML = `<div class="empty-state"><i class="fas fa-heart"></i><p>Nenhuma doação registrada ainda</p><span>Seja o primeiro a doar!</span></div>`;
+            } else {
+                let ultimasDonations = donations.slice(-5).reverse();
+                donationsList.innerHTML = ultimasDonations.map(d => `
+                    <div class="donation-item">
+                        <div class="donation-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="donation-info">
+                            <strong>${d.nome || 'Anônimo'}</strong>
+                            <span>doou <strong>R$ ${d.valor}</strong> para <span class="causa-tag">${d.causa}</span></span>
+                            <small>${d.data || new Date().toLocaleDateString()}</small>
+                        </div>
+                        <div class="donation-status ${d.status === 'Confirmado' ? 'confirmed' : 'pending'}">${d.status === 'Confirmado' ? '✓ Confirmado' : '⏳ Pendente'}</div>
+                    </div>
+                `).join('');
+            }
+        }
+    }
+    
+    atualizarContadoresHome();
+    window.addEventListener('storage', function() { atualizarContadoresHome(); });
+    
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+    
+    document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('📧 Obrigado por se inscrever! Você receberá nossas novidades.');
+        this.reset();
+    });
+</script>
 </body>
 </html>

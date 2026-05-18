@@ -2,53 +2,247 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Quero Doar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mãos que Ajudam - Quero Doar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>...</nav>
-<main class="container">
-    <h1>Escolha uma causa</h1>
-    <div class="card-grid" id="campanhas-lista"></div>
 
-    <h2>Formulário de Doação</h2>
-    <form id="donation-form">
-        <div class="form-group">
-            <label>Causa</label>
-            <select id="causa" required>
-                <option value="Crianças">Crianças</option>
-                <option value="Animais">Animais</option>
-                <option value="Alimentos">Alimentos</option>
-            </select>
+<nav class="navbar">
+    <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
+    <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="como-funciona.html">Como Funciona</a>
+        <a href="quero-doar.html" class="active">Quero Doar</a>
+        <a href="preciso-doacao.html">Preciso de Doação</a>
+        <a href="contato.html">Contato</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</nav>
+
+<main>
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Faça sua <span class="highlight">doação</span></h1>
+            <p>Seu gesto de amor transforma vidas. Escolha como ajudar</p>
         </div>
-        <div class="form-group">
-            <label>Valor (R$)</label>
-            <input type="number" id="valor" required placeholder="Ex: 50, 100">
+    </div>
+
+    <div class="container">
+        <!-- Cards de causas para selecionar -->
+        <div class="causes-selector">
+            <div class="cause-option" data-causa="Crianças">
+                <i class="fas fa-child"></i>
+                <span>Crianças</span>
+            </div>
+            <div class="cause-option" data-causa="Animais">
+                <i class="fas fa-paw"></i>
+                <span>Animais</span>
+            </div>
+            <div class="cause-option" data-causa="Alimentos">
+                <i class="fas fa-apple-alt"></i>
+                <span>Alimentos</span>
+            </div>
         </div>
-        <div class="form-group">
-            <label>Forma de pagamento</label>
-            <select id="metodo">
-                <option>Pix</option>
-                <option>Cartão de Crédito</option>
-                <option>Boleto</option>
-            </select>
+
+        <!-- Formulário de doação estilizado -->
+        <div class="donation-form-container">
+            <div class="form-header">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Informações da doação</h3>
+                <p>Preencha os dados abaixo para realizar sua doação</p>
+            </div>
+            
+            <form id="donation-form" class="donation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-tag"></i> Causa selecionada</label>
+                        <div class="selected-cause" id="selected-cause-display">Nenhuma causa selecionada</div>
+                        <input type="hidden" id="causa" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-money-bill-wave"></i> Valor (R$)</label>
+                        <div class="value-buttons">
+                            <button type="button" data-valor="25">R$ 25</button>
+                            <button type="button" data-valor="50">R$ 50</button>
+                            <button type="button" data-valor="100">R$ 100</button>
+                            <button type="button" data-valor="outro">Outro valor</button>
+                        </div>
+                        <input type="number" id="valor" placeholder="Digite o valor" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-credit-card"></i> Forma de pagamento</label>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="metodo" value="Pix"> 
+                                <i class="fas fa-qrcode"></i> Pix
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="metodo" value="Cartão"> 
+                                <i class="fas fa-credit-card"></i> Cartão
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="metodo" value="Boleto"> 
+                                <i class="fas fa-barcode"></i> Boleto
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nome completo</label>
+                        <input type="text" id="nome-doador" required placeholder="Seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="email-doador" required placeholder="seuemail@exemplo.com">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Telefone</label>
+                        <input type="text" id="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> CPF (opcional)</label>
+                        <input type="text" id="cpf" placeholder="Apenas para nota fiscal">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Mensagem (opcional)</label>
+                        <textarea id="mensagem" rows="3" placeholder="Deixe uma mensagem de apoio..."></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-heart"></i> Finalizar Doação
+                </button>
+            </form>
+            
+            <div id="donation-feedback" class="feedback-message"></div>
         </div>
-        <div class="form-group">
-            <label>Nome completo</label>
-            <input type="text" id="nome-doador" required>
-        </div>
-        <div class="form-group">
-            <label>E-mail</label>
-            <input type="email" id="email-doador" required>
-        </div>
-        <div class="form-group">
-            <label>Telefone</label>
-            <input type="text" id="telefone">
-        </div>
-        <button type="submit">Finalizar Doação</button>
-    </form>
-    <p id="donation-feedback"></p>
+    </div>
 </main>
+
+<footer>...</footer>
+
 <script src="scripts.js"></script>
+<script>
+    // Seleção de causa
+    let causaSelecionada = '';
+    document.querySelectorAll('.cause-option').forEach(opt => {
+        opt.addEventListener('click', function() {
+            document.querySelectorAll('.cause-option').forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            causaSelecionada = this.getAttribute('data-causa');
+            document.getElementById('selected-cause-display').innerHTML = `<i class="fas fa-check-circle"></i> ${causaSelecionada}`;
+            document.getElementById('causa').value = causaSelecionada;
+        });
+    });
+    
+    // Botões de valor
+    let valorInput = document.getElementById('valor');
+    document.querySelectorAll('.value-buttons button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            let valor = this.getAttribute('data-valor');
+            if (valor === 'outro') {
+                valorInput.style.display = 'block';
+                valorInput.value = '';
+                valorInput.focus();
+            } else {
+                valorInput.style.display = 'block';
+                valorInput.value = valor;
+            }
+        });
+    });
+    
+    // Submit do formulário
+    document.getElementById('donation-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!causaSelecionada) {
+            alert('Por favor, selecione uma causa');
+            return;
+        }
+        
+        let valor = document.getElementById('valor').value;
+        if (!valor || valor <= 0) {
+            alert('Por favor, informe um valor válido');
+            return;
+        }
+        
+        let metodo = document.querySelector('input[name="metodo"]:checked');
+        if (!metodo) {
+            alert('Selecione uma forma de pagamento');
+            return;
+        }
+        
+        let nome = document.getElementById('nome-doador').value;
+        if (!nome) {
+            alert('Digite seu nome');
+            return;
+        }
+        
+        let email = document.getElementById('email-doador').value;
+        if (!email) {
+            alert('Digite seu e-mail');
+            return;
+        }
+        
+        let novaDoacao = {
+            id: Date.now(),
+            nome: nome,
+            valor: parseFloat(valor),
+            metodo: metodo.value,
+            causa: causaSelecionada,
+            status: "Pendente",
+            data: new Date().toLocaleDateString(),
+            email: email,
+            telefone: document.getElementById('telefone').value,
+            mensagem: document.getElementById('mensagem').value
+        };
+        
+        let donations = JSON.parse(localStorage.getItem('donations') || '[]');
+        donations.push(novaDoacao);
+        localStorage.setItem('donations', JSON.stringify(donations));
+        
+        document.getElementById('donation-feedback').innerHTML = `
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <strong>Doação registrada com sucesso!</strong>
+                <p>Você receberá um comprovante no e-mail ${email}. O status da sua doação será atualizado em breve.</p>
+            </div>
+        `;
+        
+        this.reset();
+        causaSelecionada = '';
+        document.getElementById('selected-cause-display').innerHTML = 'Nenhuma causa selecionada';
+        document.querySelectorAll('.cause-option').forEach(o => o.classList.remove('selected'));
+        valorInput.style.display = 'none';
+        
+        setTimeout(() => {
+            document.getElementById('donation-feedback').innerHTML = '';
+        }, 5000);
+    });
+    
+    // Menu mobile
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+</script>
 </body>
 </html>

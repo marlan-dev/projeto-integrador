@@ -2,32 +2,181 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Preciso de Doação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mãos que Ajudam - Preciso de Doação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>...</nav>
-<main class="container">
-    <h1>Solicite Ajuda</h1>
-    <p>Preencha o formulário para que possamos analisar sua situação e incluir nas campanhas.</p>
-    <form id="solicitacao-form">
-        <div class="form-group"><label>Nome completo</label><input type="text" id="solic-nome" required></div>
-        <div class="form-group"><label>E-mail</label><input type="email" id="solic-email"></div>
-        <div class="form-group"><label>Telefone</label><input type="text" id="solic-tel"></div>
-        <div class="form-group"><label>Cidade/Estado</label><input type="text" id="solic-cidade" required></div>
-        <div class="form-group"><label>Tipo de ajuda necessária</label>
-            <select id="solic-tipo">
-                <option>Alimentos</option>
-                <option>Roupas</option>
-                <option>Itens de higiene</option>
-                <option>Apoio financeiro</option>
-            </select>
+
+<nav class="navbar">
+    <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
+    <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="como-funciona.html">Como Funciona</a>
+        <a href="quero-doar.html">Quero Doar</a>
+        <a href="preciso-doacao.html" class="active">Preciso de Doação</a>
+        <a href="contato.html">Contato</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</nav>
+
+<main>
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Preciso de <span class="highlight">Ajuda</span></h1>
+            <p>Estamos aqui para você. Solicite apoio e nossa equipe entrará em contato</p>
         </div>
-        <div class="form-group"><label>Descrição da necessidade</label><textarea rows="3" id="solic-desc"></textarea></div>
-        <button type="submit">Enviar solicitação</button>
-    </form>
-    <div id="solic-message"></div>
+    </div>
+
+    <div class="container">
+        <div class="help-grid">
+            <div class="help-info">
+                <div class="help-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Como podemos ajudar?</h3>
+                    <p>Oferecemos diferentes tipos de auxílio dependendo da sua necessidade. Nossa equipe avalia cada caso com atenção e respeito.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Cestas básicas e alimentos</li>
+                        <li><i class="fas fa-check"></i> Roupas e cobertores</li>
+                        <li><i class="fas fa-check"></i> Itens de higiene e limpeza</li>
+                        <li><i class="fas fa-check"></i> Orientação e encaminhamento</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="help-form-container">
+                <div class="form-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Formulário de solicitação</h3>
+                    <p>Preencha com seus dados para que possamos analisar sua situação</p>
+                </div>
+                
+                <form id="solicitacao-form" class="help-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nome completo *</label>
+                            <input type="text" id="solic-nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Data de nascimento</label>
+                            <input type="date" id="solic-nascimento">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> E-mail</label>
+                            <input type="email" id="solic-email" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Telefone *</label>
+                            <input type="text" id="solic-tel" required placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Cidade/Estado *</label>
+                            <input type="text" id="solic-cidade" required placeholder="Ex: São Paulo - SP">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-home"></i> Bairro</label>
+                            <input type="text" id="solic-bairro" placeholder="Seu bairro">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-box-open"></i> Tipo de ajuda necessária *</label>
+                        <select id="solic-tipo" required>
+                            <option value="">Selecione...</option>
+                            <option>Alimentos</option>
+                            <option>Roupas</option>
+                            <option>Itens de higiene</option>
+                            <option>Medicamentos</option>
+                            <option>Apoio financeiro</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-file-alt"></i> Descrição da necessidade *</label>
+                        <textarea id="solic-desc" rows="4" required placeholder="Conte-nos um pouco sobre sua situação. Quanto mais detalhes, melhor poderemos ajudar."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-users"></i> Número de pessoas na família</label>
+                        <input type="number" id="solic-familia" placeholder="Quantas pessoas moram com você?">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar solicitação
+                    </button>
+                </form>
+                
+                <div id="solic-message" class="feedback-message"></div>
+            </div>
+        </div>
+    </div>
 </main>
+
+<footer>...</footer>
+
 <script src="scripts.js"></script>
+<script>
+    document.getElementById('solicitacao-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let nome = document.getElementById('solic-nome').value;
+        let telefone = document.getElementById('solic-tel').value;
+        let cidade = document.getElementById('solic-cidade').value;
+        let tipo = document.getElementById('solic-tipo').value;
+        let desc = document.getElementById('solic-desc').value;
+        
+        if (!nome || !telefone || !cidade || !tipo || !desc) {
+            alert('Por favor, preencha todos os campos obrigatórios (*)');
+            return;
+        }
+        
+        // Salvar solicitação
+        let solicitacoes = JSON.parse(localStorage.getItem('solicitacoes') || '[]');
+        solicitacoes.push({
+            id: Date.now(),
+            nome: nome,
+            telefone: telefone,
+            email: document.getElementById('solic-email').value,
+            cidade: cidade,
+            bairro: document.getElementById('solic-bairro').value,
+            tipo: tipo,
+            descricao: desc,
+            familia: document.getElementById('solic-familia').value,
+            data: new Date().toLocaleDateString(),
+            status: 'Pendente'
+        });
+        localStorage.setItem('solicitacoes', JSON.stringify(solicitacoes));
+        
+        document.getElementById('solic-message').innerHTML = `
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <strong>Solicitação enviada com sucesso!</strong>
+                <p>Nossa equipe entrará em contato em até 3 dias úteis pelo telefone ${telefone}. Agradecemos sua confiança.</p>
+            </div>
+        `;
+        
+        this.reset();
+        
+        setTimeout(() => {
+            document.getElementById('solic-message').innerHTML = '';
+        }, 6000);
+    });
+    
+    // Menu mobile
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+</script>
 </body>
 </html>

@@ -2,25 +2,157 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Como Funciona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mãos que Ajudam - Como Funciona</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">...</nav>
-<main class="container">
-    <h1>Como Funciona a Plataforma</h1>
-    <div class="steps">
-        <div class="step-card">1️⃣ Escolha uma causa ou campanha</div>
-        <div class="step-card">2️⃣ Selecione o valor ou item para doar (Pix/Cartão/Boleto)</div>
-        <div class="step-card">3️⃣ Preencha seus dados e confirme</div>
-        <div class="step-card">4️⃣ Acompanhe sua doação no painel do doador</div>
-        <div class="step-card">5️⃣ Receba comprovante e veja o impacto gerado</div>
+
+<nav class="navbar">
+    <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
+    <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="como-funciona.html" class="active">Como Funciona</a>
+        <a href="quero-doar.html">Quero Doar</a>
+        <a href="preciso-doacao.html">Preciso de Doação</a>
+        <a href="contato.html">Contato</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
     </div>
-    <p><strong>Doação de itens físicos?</strong> No formulário, você agenda a coleta ou entrega nos centros de distribuição.</p>
-    <div class="map-placeholder">
-        📍 Centros de Distribuição: SP (Zona Sul), Rio (Centro), BH (Pampulha), Salvador (Liberdade), Recife (Boa Viagem)
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</nav>
+
+<main>
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Como <span class="highlight">Funciona</span></h1>
+            <p>Doar é simples, rápido e seguro. Veja o passo a passo</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="steps-detailed">
+            <div class="step-detailed">
+                <div class="step-icon-wrapper">
+                    <div class="step-circle">1</div>
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Escolha uma causa</h3>
+                    <p>Selecione entre nossas causas ativas: Crianças, Animais ou Alimentos. Você decide onde seu recurso vai ser aplicado.</p>
+                </div>
+            </div>
+            <div class="step-detailed">
+                <div class="step-icon-wrapper">
+                    <div class="step-circle">2</div>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Defina o valor ou item</h3>
+                    <p>Qualquer valor faz a diferença! Você pode doar dinheiro (Pix, Cartão, Boleto) ou itens físicos.</p>
+                </div>
+            </div>
+            <div class="step-detailed">
+                <div class="step-icon-wrapper">
+                    <div class="step-circle">3</div>
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Preencha seus dados</h3>
+                    <p>Informe nome, e-mail e forma de contato. Seus dados estão seguros.</p>
+                </div>
+            </div>
+            <div class="step-detailed">
+                <div class="step-icon-wrapper">
+                    <div class="step-circle">4</div>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Confirme e acompanhe</h3>
+                    <p>Após a confirmação, você recebe um comprovante e pode acompanhar o status da sua doação.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="physical-donation">
+            <div class="physical-icon"><i class="fas fa-box-open"></i></div>
+            <div class="physical-text">
+                <h3>Doação de itens físicos?</h3>
+                <p>Se você quer doar alimentos, roupas ou outros itens, nosso centro de distribuição em <strong>Petrópolis, RJ</strong> está preparado para receber. Entre em contato para agendar a entrega.</p>
+                <a href="quero-doar.html" class="btn-sm">Fazer doação física →</a>
+            </div>
+        </div>
+
+        <div class="centers-section">
+            <div class="section-header">
+                <span class="section-badge">Onde entregamos</span>
+                <h2>Centro de <span class="highlight">Distribuição</span></h2>
+            </div>
+            <div class="centers-grid">
+                <div class="center-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Petrópolis - RJ</strong>
+                        <span>Centro, Petrópolis - Rio de Janeiro</span>
+                        <small>📞 (24) 98765-4321</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="section-header">
+                <span class="section-badge">Dúvidas</span>
+                <h2>Perguntas <span class="highlight">frequentes</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fas fa-question-circle"></i><span>Preciso criar conta para doar?</span></div>
+                    <div class="faq-answer">Não! Você pode doar como convidado. Mas criar uma conta permite acompanhar seu histórico.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fas fa-question-circle"></i><span>Como sei que minha doação chegou?</span></div>
+                    <div class="faq-answer">Você recebe um comprovante por e-mail e pode acompanhar o status no Painel do Doador.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fas fa-question-circle"></i><span>Onde fica o centro de distribuição?</span></div>
+                    <div class="faq-answer">Em Petrópolis, Rio de Janeiro. Entre em contato para mais informações.</div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
-<footer>...</footer>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4><i class="fas fa-heart"></i> Mãos que Ajudam</h4>
+            <p>Transformando vidas através da solidariedade.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Centro de Distribuição</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Petrópolis, RJ</p>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p><i class="fas fa-envelope"></i> contato@maosqueajudam.org</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mãos que Ajudam | Petrópolis, RJ</p>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => item.classList.toggle('active'));
+    });
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+</script>
 </body>
 </html>

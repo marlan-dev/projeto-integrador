@@ -2,11 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mãos que Ajudam - Sobre Nós</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav class="navbar">
     <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
     <div class="nav-links">
@@ -16,29 +18,154 @@
         <a href="quero-doar.html">Quero Doar</a>
         <a href="preciso-doacao.html">Preciso de Doação</a>
         <a href="contato.html">Contato</a>
-        <a href="area-doador.html" class="btn-doador">Área Doador</a>
-        <a href="admin.html">Admin</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
     </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
 </nav>
 
-<main class="container">
-    <h1>Quem Somos</h1>
-    <div class="about-content">
-        <p><strong>Missão:</strong> Conectar quem quer ajudar com quem precisa, promovendo dignidade e esperança através da solidariedade.</p>
-        <p><strong>Visão:</strong> Ser a maior rede de doação colaborativa do Brasil, impactando milhões de vidas.</p>
-        <p><strong>Valores:</strong> Transparência, empatia, agilidade e compromisso social.</p>
-        <h3>Nossa História</h3>
-        <p>Fundado em 2020, o Mãos que Ajudam já mobilizou mais de 10 mil doadores e distribuiu mais de 50 toneladas de alimentos e recursos. Acreditamos que pequenos gestos geram grandes transformações.</p>
-        <div class="team">
-            <h3>Equipe</h3>
-            <div class="card-grid">
-                <div class="card">Marlan - Projeto integrador</div>
-                <div class="card">Joao pedro - Projeto integrador</div>
+<main>
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Sobre <span class="highlight">Nós</span></h1>
+            <p>Conheça a história por trás deste projeto e quem está fazendo acontecer</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="mission-vision">
+            <div class="mv-card">
+                <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Missão</h3>
+                <p>Conectar quem quer ajudar com quem precisa, promovendo dignidade e esperança através da solidariedade e transparência.</p>
+            </div>
+            <div class="mv-card">
+                <div class="mv-icon"><i class="fas fa-eye"></i></div>
+                <h3>Visão</h3>
+                <p>Ser uma referência em plataformas de doação, demonstrando como a tecnologia pode ser usada para transformar vidas.</p>
+            </div>
+            <div class="mv-card">
+                <div class="mv-icon"><i class="fas fa-gem"></i></div>
+                <h3>Valores</h3>
+                <p>Transparência, empatia, inovação, compromisso social e trabalho em equipe.</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-text">
+                <span class="section-badge">Nossa Jornada</span>
+                <h2>Como tudo <span class="highlight">começou</span></h2>
+                <p>Este projeto nasceu como parte do <strong>Projeto Integrador</strong> do nosso curso. A ideia era desenvolver uma solução tecnológica que pudesse impactar positivamente a sociedade, e escolhemos criar uma plataforma de doações para conectar pessoas generosas a quem mais precisa.</p>
+                <p>O Mãos que Ajudam é um sistema completo que permite o cadastro de doações, gerenciamento de campanhas, painel administrativo e acompanhamento de beneficiários. Tudo pensado para ser simples, transparente e eficiente.</p>
+                <p>Nosso centro de distribuição está localizado em <strong>Petrópolis, Rio de Janeiro</strong>, atendendo toda a região serrana.</p>
+                <div class="history-stats">
+                    <div class="history-stat">
+                        <span class="history-number" id="total-donations-count">0</span>
+                        <span>doações realizadas</span>
+                    </div>
+                    <div class="history-stat">
+                        <span class="history-number">3</span>
+                        <span>causas ativas</span>
+                    </div>
+                    <div class="history-stat">
+                        <span class="history-number">2026</span>
+                        <span>ano de lançamento</span>
+                    </div>
+                </div>
+            </div>
+            <div class="history-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-city"></i>
+                    <p>Petrópolis - RJ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="section-header">
+                <span class="section-badge">Time</span>
+                <h2>Quem está por trás <span class="highlight">deste projeto</span></h2>
+                <p>Desenvolvedores e criadores do Mãos que Ajudam</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h4>Marlan Ramos</h4>
+                    <span>Desenvolvedor Full Stack</span>
+                    <p>"Acredito que a tecnologia pode ser uma ferramenta poderosa para transformar vidas. Desenvolvi este sistema pensando em facilitar o ato de doar."</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h4>João Pedro Manhardt</h4>
+                    <span>Desenvolvedor Full Stack</span>
+                    <p>"Criar uma plataforma que incentiva a solidariedade é muito gratificante. Espero que o Mãos que Ajudam ajude muitas pessoas."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <div class="project-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Projeto Integrador</h3>
+                <p>Este site foi desenvolvido como parte do Trabalho do Projeto Integrador do nosso curso. O objetivo foi aplicar os conhecimentos adquiridos em desenvolvimento web para criar uma solução completa e funcional.</p>
+                <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                    <span>Petrópolis, RJ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="transparency-badge">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+                <h4>Compromisso com a Transparência</h4>
+                <p>Este é um projeto acadêmico demonstrativo. Todas as funcionalidades são reais e os dados são armazenados localmente no seu navegador. Nosso centro de distribuição fica em Petrópolis, RJ.</p>
             </div>
         </div>
     </div>
 </main>
-<footer>...</footer>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4><i class="fas fa-heart"></i> Mãos que Ajudam</h4>
+            <p>Projeto Integrador - Desenvolvido por Marlan Ramos & João Pedro Manhardt</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="quero-doar.html">Quero Doar</a>
+        </div>
+        <div class="footer-section">
+            <h4>Centro de Distribuição</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Petrópolis, RJ</p>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p><i class="fas fa-envelope"></i> contato@maosqueajudam.org</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mãos que Ajudam - Projeto Integrador | Petrópolis, RJ</p>
+    </div>
+</footer>
+
 <script src="scripts.js"></script>
+<script>
+    function atualizarContadores() {
+        let donations = JSON.parse(localStorage.getItem('donations') || '[]');
+        let countElement = document.getElementById('total-donations-count');
+        if (countElement) countElement.textContent = donations.length;
+    }
+    atualizarContadores();
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+    window.addEventListener('storage', function() { atualizarContadores(); });
+</script>
 </body>
 </html>

@@ -2,25 +2,113 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Contato</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mãos que Ajudam - Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>...</nav>
-<main class="container">
-    <h1>Fale conosco</h1>
-    <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> contato@maosqueajudam.org</p>
-        <p><i class="fas fa-phone"></i> (24) 98765-4321</p>
-        <p><i class="fab fa-instagram"></i> @maosqueajudam</p>
+
+<nav class="navbar">
+    <div class="logo"><span>❤️</span> Mãos que Ajudam</div>
+    <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="como-funciona.html">Como Funciona</a>
+        <a href="quero-doar.html">Quero Doar</a>
+        <a href="preciso-doacao.html">Preciso de Doação</a>
+        <a href="contato.html" class="active">Contato</a>
+        <a href="area-doador.html" class="btn-doador">🌟 Área Doador</a>
+        <a href="admin.html" class="btn-admin">🔐 Admin</a>
     </div>
-    <form id="contact-form">
-        <div class="form-group"><input type="text" placeholder="Seu nome" id="contact-nome"></div>
-        <div class="form-group"><input type="email" placeholder="E-mail" id="contact-email"></div>
-        <div class="form-group"><textarea placeholder="Sua mensagem" rows="4" id="contact-msg"></textarea></div>
-        <button type="submit">Enviar mensagem</button>
-    </form>
-</main>
-<script src="scripts.js"></script>
-</body>
-</html>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+</nav>
+
+<main>
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Entre em <span class="highlight">Contato</span></h1>
+            <p>Tem dúvidas, sugestões ou quer ser voluntário? Fale conosco!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Centro de Distribuição</h4>
+                    <p>Petrópolis, Rio de Janeiro<br>CEP: 25680-000</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Telefone</h4>
+                    <p>(24) 98765-4321<br>(24) 3456-7890</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>E-mail</h4>
+                    <p>contato@maosqueajudam.org<br>voluntarios@maosqueajudam.org</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Horário</h4>
+                    <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                </div>
+            </div>
+            
+            <div class="social-section">
+                <h3>Nossas redes sociais</h3>
+                <div class="social-buttons">
+                    <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i> @maosqueajudam</a>
+                    <a href="#" class="social-btn facebook"><i class="fab fa-facebook"></i> /maosqueajudam</a>
+                    <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> (24) 98765-4321</a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Envie uma mensagem</h3>
+                    <p>Responderemos em até 24 horas úteis</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nome *</label>
+                            <input type="text" id="contact-nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> E-mail *</label>
+                            <input type="email" id="contact-email" required placeholder="seuemail@exemplo.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Telefone</label>
+                            <input type="text" id="contact-tel" placeholder="(24) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Assunto *</label>
+                            <select id="contact-assunto" required>
+                                <option value="">Selecione...</option>
+                                <option>Dúvidas sobre doações</option>
+                                <option>Ser voluntário</option>
+                                <option>Parcerias</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Mensagem *</label>
+                        <textarea id="contact-msg" rows="4" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+                </form>
+                
+                <div id="contact-message" class="feedback-message"></div>
+            </div
