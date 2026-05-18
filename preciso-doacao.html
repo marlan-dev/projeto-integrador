@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Preciso de Doação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>...</nav>
+<main class="container">
+    <h1>Solicite Ajuda</h1>
+    <p>Preencha o formulário para que possamos analisar sua situação e incluir nas campanhas.</p>
+    <form id="solicitacao-form">
+        <div class="form-group"><label>Nome completo</label><input type="text" id="solic-nome" required></div>
+        <div class="form-group"><label>E-mail</label><input type="email" id="solic-email"></div>
+        <div class="form-group"><label>Telefone</label><input type="text" id="solic-tel"></div>
+        <div class="form-group"><label>Cidade/Estado</label><input type="text" id="solic-cidade" required></div>
+        <div class="form-group"><label>Tipo de ajuda necessária</label>
+            <select id="solic-tipo">
+                <option>Alimentos</option>
+                <option>Roupas</option>
+                <option>Itens de higiene</option>
+                <option>Apoio financeiro</option>
+            </select>
+        </div>
+        <div class="form-group"><label>Descrição da necessidade</label><textarea rows="3" id="solic-desc"></textarea></div>
+        <button type="submit">Enviar solicitação</button>
+    </form>
+    <div id="solic-message"></div>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Doador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>...</nav>
+<main class="container">
+    <div id="login-area">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="E-mail cadastrado">
+        <input type="password" id="login-senha" placeholder="Senha">
+        <button id="login-btn">Entrar</button>
+        <p>Ainda não tem conta? <button id="cadastro-btn" style="background:gray;">Criar conta</button></p>
+    </div>
+    <div id="dashboard-doador" style="display:none;">
+        <h2>📊 Meu Histórico de Doações</h2>
+        <table class="donation-table" id="historico-tabela">
+            <thead><tr><th>Data</th><th>Causa</th><th>Valor</th><th>Status</th><th>Comprovante</th></tr></thead>
+            <tbody id="historico-body"></tbody>
+        </table>
+        <button id="logout-btn">Sair</button>
+    </div>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

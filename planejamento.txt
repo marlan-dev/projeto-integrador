@@ -1,0 +1,26 @@
+1. Páginas Públicas (Para os Visitantes)
+    Página Inicial (Home): É o cartão de visitas. Deve explicar a causa, mostrar fotos impactantes, o objetivo do projeto e ter um botão de destaque (CTA - Call to Action) como "Doe Agora" ou "Seja um Voluntário".
+    Página "Sobre Nós" / "Quem Somos": Onde você detalha a história do projeto, a missão, a visão e os membros da equipe. Isso gera confiança para quem vai doar.
+    Página de Contato: Um formulário simples para dúvidas, além de links para redes sociais, e-mail e telefone.
+
+2. O Fluxo de Doação (O Coração do Sistema)
+
+    Página de Campanhas / Causas: Se o seu projeto tiver mais de uma causa (ex: doar para crianças, doar para animais, doação de alimentos), crie uma página listando essas opções para o usuário escolher para onde vai o dinheiro/recurso.
+    Formulário de Doação: É aqui que a mágica acontece. O usuário escolhe o valor (ou o item a ser doado), preenche os dados pessoais e escolhe a forma de pagamento (Pix, Cartão ou Boleto).
+        Dica de Dev: Se for uma doação de itens físicos (roupas, alimentos), essa página deve ter um formulário para agendar a entrega ou a retirada.
+    Página de Sucesso / Agradecimento: Após a confirmação do pagamento ou do envio do formulário, o usuário deve ser redirecionado para uma tela agradecendo pelo apoio, mostrando que a operação deu certo e, se possível, gerando um comprovante.
+
+3. Área do Usuário (Autenticação)
+
+Se o professor exigir que o sistema tenha login, você precisará de:
+    Página de Login e Cadastro: Telas para o doador criar uma conta ou acessar o sistema.
+    Painel do Doador (Dashboard): Uma área logada onde o usuário pode ver o histórico de todas as doações que já fez, baixar recibos e atualizar seus dados cadastrais.
+
+4. Painel Administrativo (Para os Gestores do Projeto)
+
+Essa parte geralmente garante uma nota mais alta porque mostra que você pensou no funcionamento real do sistema.
+    Dashboard Admin: Uma tela com gráficos simples ou resumos (ex: total arrecadado no mês, número de novos doadores, metas da campanha).
+    Gerenciamento de Doações (CRUD): Uma tabela que lista todas as doações recebidas, onde o administrador pode mudar o status (ex: de "Pendente" para "Confirmado").
+    Gerenciamento de Campanhas: Uma área para o administrador criar, editar ou excluir novas causas ou campanhas de arrecadação.
+
+    lista de doações, locais de centro de distribuição, pagina "quero doar" e "preciso de doação", e pagina de como funcione, sobre mim, dentre outras coisas 

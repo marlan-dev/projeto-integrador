@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Mãos que Ajudam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<nav>...</nav>
+<main class="container">
+    <h1>Painel Administrativo</h1>
+    <div class="tabs-admin">
+        <button class="tab-btn active-tab" data-tab="dashboard">Dashboard</button>
+        <button class="tab-btn" data-tab="doacoes">Doações (CRUD)</button>
+        <button class="tab-btn" data-tab="campanhas">Campanhas</button>
+        <button class="tab-btn" data-tab="centros">Centros de Distribuição</button>
+    </div>
+
+    <!-- Aba Dashboard -->
+    <div id="dashboard-tab" class="tab-content">
+        <canvas id="grafico-arrecadacao" width="400" height="200"></canvas>
+        <div class="stats">💰 Total arrecadado no mês: <span id="total-mes">R$ 0</span></div>
+        <div>👥 Novos doadores este mês: <span id="novos-doadores">0</span></div>
+    </div>
+
+    <!-- Aba Doações -->
+    <div id="doacoes-tab" class="tab-content hidden-section">
+        <button id="btn-nova-doacao-admin">+ Nova Doação</button>
+        <table class="donation-table" id="admin-donations-table">
+            <thead><tr><th>ID</th><th>Doador</th><th>Valor</th><th>Status</th><th>Ações</th></tr></thead>
+            <tbody id="admin-donations-body"></tbody>
+        </table>
+    </div>
+
+    <!-- Aba Campanhas -->
+    <div id="campanhas-tab" class="tab-content hidden-section">
+        <div id="campanhas-list-admin"></div>
+        <h3>Criar nova campanha</h3>
+        <input type="text" id="nova-campanha-titulo" placeholder="Título">
+        <input type="number" id="nova-campanha-meta" placeholder="Meta R$">
+        <button id="criar-campanha-btn">Criar</button>
+    </div>
+
+    <!-- Aba Centros -->
+    <div id="centros-tab" class="tab-content hidden-section">
+        <ul id="centros-lista">
+            <li>📍 São Paulo - Zona Sul</li><li>📍 Rio de Janeiro - Centro</li>
+            <li>📍 Belo Horizonte - Pampulha</li><li>📍 Salvador - Liberdade</li>
+            <li>📍 Recife - Boa Viagem</li>
+        </ul>
+        <button id="adicionar-centro-btn">Adicionar novo centro</button>
+    </div>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

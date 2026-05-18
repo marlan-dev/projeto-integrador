@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: #fefaf5;
+    color: #2d2a24;
+}
+.navbar {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.logo { font-size: 1.7rem; font-weight: 700; color: #e67e22; }
+.logo span { color: #2c3e50; }
+.nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+.nav-links a {
+    text-decoration: none;
+    color: #3b3a36;
+    font-weight: 500;
+}
+.nav-links a:hover, .nav-links a.active { color: #e67e22; }
+.btn-doador, .btn-admin {
+    background: #e67e22;
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+.hero {
+    background: linear-gradient(135deg, #ffefe0, #fff5eb);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.btn-cta {
+    background: #e67e22;
+    border: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 60px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    flex: 1 1 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+}
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.donation-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+.donation-table th, .donation-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+.tabs-admin {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.tab-btn {
+    background: #ececec;
+    color: #2c3e50;
+}
+.tab-btn.active-tab {
+    background: #e67e22;
+    color: white;
+}
+.hidden-section {
+    display: none;
+}
+.map-placeholder, .image-showcase {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.image-showcase img {
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.step-card {
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
